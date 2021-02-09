@@ -1,0 +1,681 @@
+[2021-02-10 00:38:35,361][21428][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:38:35,361][21428][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:38:35,362][21428][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:38:35,363][21428][main.py][line: 90][INFO] >> train_data: data/LCCC-train-small.txt
+[2021-02-10 00:38:35,364][21428][main.py][line: 90][INFO] >> valid_data: data/LCCC-valid-small.txt
+[2021-02-10 00:38:35,364][21428][main.py][line: 90][INFO] >> test_data: data/LCCC-test.txt
+[2021-02-10 00:38:35,364][21428][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:38:35,374][21428][my_utils.py][line: 114][INFO] >> reading data from ['data\\data/LCCC-train-small.txt']
+[2021-02-10 00:38:35,374][21428][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 103, in <module>
+    vocab, logger, config['max_seq_len'] - 1)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\my_utils.py", line 110, in __init__
+    self.data = DialogDataset.make_dataset(paths, vocab, logger, max_lengths)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\my_utils.py", line 117, in make_dataset
+    with open(path, 'r', encoding='utf8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\data/LCCC-train-small.txt'
+
+[2021-02-10 00:39:30,830][11340][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:39:30,830][11340][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:39:30,831][11340][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:39:30,832][11340][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:39:30,840][11340][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:39:31,314][11340][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:39:31,321][11340][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:39:31,438][11340][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:39:31,439][11340][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:39:33,635][11340][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:39:34,611][11340][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:39:39,358][11340][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 138, in <module>
+    trainer.train(config['n_epochs'], after_epoch_funcs=[sample_text_func], risk_func=f1_score)
+TypeError: train() got an unexpected keyword argument 'risk_func'
+
+[2021-02-10 00:41:30,816][13024][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:41:30,816][13024][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:41:30,816][13024][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:41:30,816][13024][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:41:30,817][13024][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:41:30,818][13024][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:41:30,826][13024][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:41:31,264][13024][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:41:31,268][13024][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:41:31,374][13024][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:41:31,374][13024][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:41:33,491][13024][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:41:33,746][13024][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:41:35,509][13024][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 138, in <module>
+    trainer.train(config['n_epochs'], after_epoch_funcs=[sample_text_func])
+TypeError: train() missing 1 required positional argument: 'epochs'
+
+[2021-02-10 00:43:03,452][30972][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:43:03,453][30972][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:43:03,454][30972][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:43:03,462][30972][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:43:03,894][30972][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:43:03,898][30972][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:43:04,005][30972][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:43:04,006][30972][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:43:06,138][30972][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:43:06,394][30972][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:43:08,668][30972][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 138, in <module>
+    trainer.train(epochs=15, after_epoch_funcs=[sample_text_func])
+TypeError: train() missing 1 required positional argument: 'start_epoch'
+
+[2021-02-10 00:45:55,109][12116][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:45:55,109][12116][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:45:55,110][12116][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:45:55,111][12116][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:45:55,111][12116][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:45:55,111][12116][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:45:55,118][12116][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:45:55,548][12116][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:45:55,553][12116][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:45:55,658][12116][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:45:55,659][12116][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:45:57,805][12116][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:45:58,060][12116][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:45:59,427][12116][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:46:00,159][12116][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 95, in _eval_train
+    full_loss = (batch_lm_loss * self.config.lm_weight + batch_loss) / self.config.batch_split
+AttributeError: 'dict' object has no attribute 'lm_weight'
+
+[2021-02-10 00:47:59,192][22696][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:47:59,192][22696][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:47:59,192][22696][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:47:59,192][22696][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:47:59,192][22696][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:47:59,193][22696][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:47:59,194][22696][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:47:59,202][22696][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:47:59,634][22696][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:47:59,638][22696][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:47:59,744][22696][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:47:59,745][22696][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:48:01,885][22696][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:48:02,140][22696][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:48:03,506][22696][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:48:04,234][22696][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 95, in _eval_train
+    full_loss = (batch_lm_loss * self.config['lm_weight'] + batch_loss) / self.config.batch_split
+AttributeError: 'dict' object has no attribute 'batch_split'
+
+[2021-02-10 00:48:36,229][8640][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:48:36,229][8640][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:48:36,229][8640][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:48:36,229][8640][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:48:36,230][8640][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:48:36,231][8640][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:48:36,239][8640][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:48:36,663][8640][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:48:36,668][8640][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:48:36,773][8640][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:48:36,774][8640][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:48:38,870][8640][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:48:39,125][8640][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:48:40,486][8640][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:48:41,340][8640][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 105, in _eval_train
+    if (i + 1) % self.config.batch_split == 0:
+AttributeError: 'dict' object has no attribute 'batch_split'
+
+[2021-02-10 00:48:59,356][27632][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:48:59,357][27632][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:48:59,358][27632][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:48:59,366][27632][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:48:59,798][27632][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:48:59,803][27632][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:48:59,908][27632][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:48:59,909][27632][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:49:02,002][27632][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:49:02,256][27632][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:49:03,623][27632][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:49:05,098][27632][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 106, in _eval_train
+    if self.config.clip_grad is not None:
+AttributeError: 'dict' object has no attribute 'clip_grad'
+
+[2021-02-10 00:49:25,093][8944][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:49:25,093][8944][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:49:25,094][8944][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:49:25,095][8944][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:49:25,103][8944][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:49:25,561][8944][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:49:25,567][8944][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:49:25,679][8944][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:49:25,680][8944][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:49:27,893][8944][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:49:28,161][8944][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:49:29,540][8944][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:49:31,029][8944][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 108, in _eval_train
+    nn.utils.clip_grad_norm_(group['params'], self.config.clip_grad)
+AttributeError: 'dict' object has no attribute 'clip_grad'
+
+[2021-02-10 00:49:56,236][8484][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:49:56,236][8484][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:49:56,237][8484][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:49:56,238][8484][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:49:56,238][8484][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:49:56,245][8484][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:49:56,676][8484][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:49:56,681][8484][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:49:56,787][8484][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:49:56,788][8484][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:49:58,946][8484][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:49:59,211][8484][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:50:01,104][8484][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:50:03,412][8484][main.py][line: 143][ERROR] >> Traceback (most recent call last):
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 141, in <module>
+    raise e
+  File "C:/Users/TechFast Australia/PycharmProjects/untitled/NLP/my_GPT_Dialog_model/main.py", line 137, in <module>
+    trainer.train(start_epoch, config['n_epochs'], after_epoch_funcs=[save_func])
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 215, in train
+    self._eval_train(epoch)
+  File "C:\Users\TechFast Australia\PycharmProjects\untitled\NLP\my_GPT_Dialog_model\trainer.py", line 126, in _eval_train
+    if self.optimizer.curr_step() % self.config.eval_steps == 0:
+AttributeError: 'dict' object has no attribute 'eval_steps'
+
+[2021-02-10 00:50:18,825][4876][main.py][line: 88][INFO] >> pytorch version: 1.4.0+cu92
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> max_seq_len: 45
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> beam_size: 4
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> diversity_coef: 0
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> diversity_groups: 2
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> sample: False
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> annealing_topk: 20
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> temperature: 0.8
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> annealing: 0
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> length_penalty: 2.2
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> n_layers: 12
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> embeddings_size: 768
+[2021-02-10 00:50:18,825][4876][main.py][line: 90][INFO] >> n_heads: 12
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> dropout: 0.1
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> eval_steps: 100
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> comment: below is the training parameters
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> n_epochs: 17
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> batch_size: 16
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> batch_split: 4
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> lr: 6.25e-05
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> lr_warmup: 1000
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> lm_weight: 0.02
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> risk_weight: 0
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> n_jobs: 0
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> clip_grad: 1.0
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> seed: 42
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> load_last: False
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> train_dir: train
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> eval_dir: eval
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> data_dir: data
+[2021-02-10 00:50:18,826][4876][main.py][line: 90][INFO] >> log_dir: log
+[2021-02-10 00:50:18,827][4876][main.py][line: 90][INFO] >> best_dir: best
+[2021-02-10 00:50:18,827][4876][main.py][line: 90][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:50:18,827][4876][main.py][line: 90][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:50:18,827][4876][main.py][line: 90][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:50:18,827][4876][main.py][line: 90][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:50:18,835][4876][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-train-small.txt']
+[2021-02-10 00:50:19,268][4876][my_utils.py][line: 125][INFO] >> 50000 data record loaded
+[2021-02-10 00:50:19,272][4876][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-valid-small.txt']
+[2021-02-10 00:50:19,377][4876][my_utils.py][line: 125][INFO] >> 10000 data record loaded
+[2021-02-10 00:50:19,378][4876][main.py][line: 107][INFO] >> Building models
+[2021-02-10 00:50:21,525][4876][main.py][line: 115][INFO] >> start from CGPT weights
+[2021-02-10 00:50:21,778][4876][main.py][line: 123][INFO] >> CGPT weights loaded from chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:50:23,645][4876][trainer.py][line: 214][INFO] >> Training on epoch 1, step 1
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> vocab_path: chinese_gpt_original/dict.txt
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> max_seq_len: 45
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> beam_size: 4
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> diversity_coef: 0
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> diversity_groups: 2
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> sample: False
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> annealing_topk: 20
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> temperature: 0.8
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> annealing: 0
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> length_penalty: 2.2
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> n_layers: 12
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> n_pos_embeddings: 512
+[2021-02-10 00:54:50,957][27264][test.py][line: 67][INFO] >> embeddings_size: 768
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> n_heads: 12
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> dropout: 0.1
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> embed_dropout: 0.1
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> attn_dropout: 0.1
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> ff_dropout: 0.1
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> eval_steps: 100
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> comment: below is the training parameters
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> n_epochs: 17
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> batch_size: 16
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> batch_split: 4
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> lr: 6.25e-05
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> lr_warmup: 1000
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> lm_weight: 0.02
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> risk_weight: 0
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> n_jobs: 0
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> label_smoothing: 0.1
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> clip_grad: 1.0
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> seed: 42
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> load_last: False
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> train_dir: train
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> eval_dir: eval
+[2021-02-10 00:54:50,958][27264][test.py][line: 67][INFO] >> data_dir: data
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> log_dir: log
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> best_dir: best
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> train_data: LCCC-train-small.txt
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> valid_data: LCCC-valid-small.txt
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> test_data: LCCC-test.txt
+[2021-02-10 00:54:50,959][27264][test.py][line: 67][INFO] >> cgpt_parameters_dir: chinese_gpt_original/Cgpt_model.bin
+[2021-02-10 00:54:50,967][27264][my_utils.py][line: 114][INFO] >> reading data from ['data\\LCCC-test.txt']
+[2021-02-10 00:54:51,131][27264][my_utils.py][line: 125][INFO] >> 19008 data record loaded
+[2021-02-10 00:54:51,133][27264][test.py][line: 78][INFO] >> Building models
+[2021-02-10 00:54:53,313][27264][test.py][line: 85][INFO] >> Weights loading from train\model-16.ckpt
